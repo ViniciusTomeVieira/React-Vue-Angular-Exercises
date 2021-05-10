@@ -23,9 +23,9 @@
                 </thead>
                 <tbody>
                     <tr v-for="(sale, index) in salesByProduct">
-                        <td>#{{ index + 1 }}</td>
-                        <td>#{{ sale.name }}</td>
-                        <td v-money="'R$'">#{{ sale.value }}</td>
+                        <td>{{ index + 1 }}</td>
+                        <td>{{ sale.name }}</td>
+                        <td v-money="'R$'">{{ sale.value }}</td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -37,7 +37,7 @@
                 </tfoot>
             </table>
 
-            <!-- <table class="mt-5 table">
+            <table class="mt-5 table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -56,7 +56,7 @@
                         <td>{{ sale.data }}</td>
                     </tr>
                 </tbody>
-            </table> -->
+            </table>
         </div>
     </div>
     <script>
@@ -100,6 +100,7 @@
                         }
 
                         grouped[sale.name].value += sale.price * sale.qtde
+                        return grouped
                     }, {})
 
                     return Object.values(salesByProduct)
