@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <h1>Calculadora</h1>
+      <h1>Calculadora Vue.js</h1>
       <Calculator />
   </div>
 </template>
@@ -17,6 +17,10 @@ export default {
 @font-face {
     font-family: "RobotoMono";
     src: url("./fonts/RobotoMono-Thin.ttf");
+}
+
+h1 {
+    font-size: 1.3em;
 }
 
 * {
