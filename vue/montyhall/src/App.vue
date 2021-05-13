@@ -75,6 +75,11 @@ body {
     font-size: 2rem;
 }
 
+button {
+    background-color: #0004;
+    color: #FFF;
+}
+
 .doors {
     align-self: stretch;
     display: flex;
